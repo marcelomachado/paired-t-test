@@ -1,0 +1,22 @@
+-- teacher_centered
+SELECT aluno.id
+	 , aluno.habilidade as ability
+     , SUM(aluno_disciplina_pontuacao.pontuacao) as final_result     
+  FROM aluno_disciplina_pontuacao
+ RIGHT JOIN aluno
+ 	ON aluno_disciplina_pontuacao.id_aluno = aluno.id
+ WHERE aluno.identificador_grupo = 0
+ GROUP BY (aluno.id)
+ ORDER By (aluno.id)
+ 
+ -- curriculum_sequencing_adaptation
+ 
+SELECT aluno.id
+	 , aluno.habilidade as ability
+     , SUM(aluno_disciplina_pontuacao.pontuacao) as final_result     
+  FROM aluno_disciplina_pontuacao
+ RIGHT JOIN aluno
+ 	ON aluno_disciplina_pontuacao.id_aluno = aluno.id
+ WHERE aluno.identificador_grupo = 1
+ GROUP BY (aluno.id)
+ ORDER By (aluno.id)
