@@ -1,6 +1,6 @@
 -- teacher_centered
 SELECT aluno.id
-	 , aluno.habilidade as ability
+     , aluno.habilidade as ability
      , SUM(aluno_disciplina_pontuacao.pontuacao) as final_result     
   FROM aluno_disciplina_pontuacao
  RIGHT JOIN aluno
@@ -12,7 +12,7 @@ SELECT aluno.id
  -- curriculum_sequencing_adaptation
  
 SELECT aluno.id
-	 , aluno.habilidade as ability
+     , aluno.habilidade as ability
      , SUM(aluno_disciplina_pontuacao.pontuacao) as final_result     
   FROM aluno_disciplina_pontuacao
  RIGHT JOIN aluno
